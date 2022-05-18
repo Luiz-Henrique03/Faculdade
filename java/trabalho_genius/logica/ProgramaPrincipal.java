@@ -10,6 +10,7 @@ public class ProgramaPrincipal {
         Genius logicaGenius = new Genius();
         FrmGenius frm = new FrmGenius(logicaGenius);
         frm.setVisible(true);
+       do{ 
          int rodada = 1;
         do {
             
@@ -27,8 +28,12 @@ public class ProgramaPrincipal {
 
             rodada++;
 
-        } while (logicaGenius.compararSequencias());
+         } while (logicaGenius.compararSequencias());
 
-        JOptionPane.showMessageDialog(frm,"Perdeu, fim de jogo");
+         logicaGenius.getCoresSorteadas().clear();
+       }while( JOptionPane.showOptionDialog(frm,"Deseja Continuar","Genius",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null,null,null) == JOptionPane.YES_OPTION);
+
+        frm.setVisible(false);
+        frm.dispose();
     }
 }
