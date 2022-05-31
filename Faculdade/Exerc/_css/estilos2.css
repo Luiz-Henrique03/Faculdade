@@ -1,0 +1,47 @@
+.pai{
+    display: grid;
+    grid-template-areas: "f1 f1 f2" "f3 f4 f4" "f3 f5 f6";
+    grid-template-columns: repeat(4,200px);
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.filho{
+    background-color: tomato;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.filho-1{
+    /*grid-column: 1 / span 2;*/
+    grid-area: f1;
+    background-color: greenyellow;
+  }
+
+  .filho-2{
+    grid-area: f2;
+    background-color: rgb(187, 154, 46);
+  }
+  
+  .filho-3{
+    grid-area: f3;
+    background-color: rgb(59, 113, 194);
+    height: 50px;
+  }
+  
+  .filho-4{
+    grid-area: f4;
+    background-color: rgb(255, 192, 250);
+  }
+  
+  .filho-5{
+    grid-area: f5;
+    background-color: green;
+  }
+  
+  .filho-6{
+    grid-area: f6;
+    background-color: rgb(245, 188, 0);
+  }
