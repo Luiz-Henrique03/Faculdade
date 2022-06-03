@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 3</title>
+</head>
+<body>
+    <p>Primeiro paragrafo</p>
+    <p>Segundo paragrafo</p>
+    <p>Terceiro paragrafo</p>
+
+    <button onclick="ex_03()">Clicar!</button>
+
+    <script>
+        function ex_03(){
+        //    window.alert(document.getElementsByTagName("p")[1].innerText)
+        var nodes = document.getElementsByTagName("p");
+
+        for(var i =0; i< nodes.length; i++){
+            window.alert(nodes[i].innerText)
+        }
+    }
+    </script>
+</body>
+</html>
